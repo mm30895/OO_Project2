@@ -4,7 +4,7 @@
 ## Getting Started
 To begin, follow these steps:
 1. Open Terminal: Launch your terminal application.
-2. Navigate to the desired locationc and type
+2. Navigate to the desired location
 ```bash
 git clone https://github.com/mm30895/OO_Project2.git
 ```
