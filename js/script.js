@@ -133,28 +133,28 @@ scene.add(overlay)
 /**
  * GLTF Model
  */
-let donut = null
+let greg = null
 
 gltfLoader.load(
-    './assets/donut/scene (7).gltf',
+    './assets/3d/scene (7).gltf',
     (gltf) => {
         console.log(gltf);
 
-        donut = gltf.scene
+        greg = gltf.scene
 
         //const radius = 15
 
-        donut.position.x = -1.7;
-        // donut.position.y = -60;
+        greg.position.x = -1.7;
+        // greg.position.y = -60;
 
-        donut.rotation.y = 1.9;
+        greg.rotation.y = 1.9;
 
-        //donut.rotation.x = Math.PI * 0.2
-        donut.rotation.z = 0.2
+        //greg.rotation.x = Math.PI * 0.2
+        greg.rotation.z = 0.2
 
-        //donut.scale.set(radius, radius, radius)
+        //greg.scale.set(radius, radius, radius)
 
-        scene.add(donut)
+        scene.add(greg)
     },
     (progress) => {
         console.log(progress);
@@ -190,7 +190,7 @@ const sizes = {
 let scrollY = window.scrollY
 let currentSection = 0
 
-const transformDonut = [
+const transformgreg = [
     {
         rotationZ: 0.2,
         rotationY: 1.9,
@@ -315,26 +315,26 @@ window.addEventListener('scroll', () => {
     if (newSection != currentSection) {
         currentSection = newSection
 
-        if (!!donut) {
+        if (!!greg) {
             gsap.to(
-                donut.rotation, {
+                greg.rotation, {
                     duration: 1.5,
                     ease: 'power2.inOut',
-                    z: transformDonut[currentSection].rotationZ
+                    z: transformgreg[currentSection].rotationZ
                 }
             )
             gsap.to(
-                donut.position, {
+                greg.position, {
                     duration: 1.5,
                     ease: 'power2.inOut',
-                    x: transformDonut[currentSection].positionX
+                    x: transformgreg[currentSection].positionX
                 }
             )
             gsap.to(
-                donut.rotation, {
+                greg.rotation, {
                     duration: 1.5,
                     ease: 'power2.inOut',
-                    y: transformDonut[currentSection].rotationY
+                    y: transformgreg[currentSection].rotationY
                 }
             )
             
@@ -343,7 +343,7 @@ window.addEventListener('scroll', () => {
                 sphereShadow.position, {
                     duration: 1.5,
                     ease: 'power2.inOut',
-                    x: transformDonut[currentSection].positionX 
+                    x: transformgreg[currentSection].positionX 
                 }
             )
         }
@@ -443,9 +443,9 @@ const tick = () => {
     const deltaTime = elapsedTime - lastElapsedTime
     lastElapsedTime = elapsedTime
 
-    if (!!donut) {
-        donut.position.y = Math.sin(elapsedTime * .5) * .1 - 0.1
-        sphereShadow.material.opacity = (1 - Math.abs(donut.position.y)) * 0.3
+    if (!!greg) {
+        greg.position.y = Math.sin(elapsedTime * .5) * .1 - 0.1
+        sphereShadow.material.opacity = (1 - Math.abs(greg.position.y)) * 0.3
     }
     
     // Render
@@ -471,7 +471,7 @@ window.onbeforeunload = function () {
 let pose = null
 
 gltfLoader.load(
-    './assets/donut/scene (8).gltf',
+    './assets/3d/scene (8).gltf',
     (gltf) => {
         console.log(gltf);
 
@@ -481,14 +481,14 @@ gltfLoader.load(
         
 
         pose.position.x = 10;
-        //donut.position.y = -60;
+        //greg.position.y = -60;
 
         pose.rotation.y = 0
 
-        //donut.rotation.x = Math.PI * 0.2
+        //greg.rotation.x = Math.PI * 0.2
         pose.rotation.z = 0
 
-        //donut.scale.set(radius, radius, radius)
+        //greg.scale.set(radius, radius, radius)
 
         scene.add(pose)
     },
@@ -507,7 +507,7 @@ gltfLoader.load(
 let hammer = null
 
 gltfLoader.load(
-    './assets/donut/vaja1.gltf',
+    './assets/3d/vaja1.gltf',
     (gltf) => {
         console.log(gltf);
 
@@ -516,14 +516,14 @@ gltfLoader.load(
         //const radius = 15
 
         hammer.position.x = 10;
-        //donut.position.y = -60;
+        //greg.position.y = -60;
 
         hammer.rotation.y = 0
 
-        //donut.rotation.x = Math.PI * 0.2
+        //greg.rotation.x = Math.PI * 0.2
         hammer.rotation.z = 0
 
-        //donut.scale.set(radius, radius, radius)
+        //greg.scale.set(radius, radius, radius)
 
         scene.add(hammer)
     },
